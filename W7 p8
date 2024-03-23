@@ -1,0 +1,76 @@
+import java.util.Scanner;
+public class checkpalindrome {
+	public static void main(String[] args) {
+		String str_original="",reversestr="";
+		Scanner inScanner=new Scanner(System.in);
+		System.out.println("enter any valid String:");
+		str_original=inScanner.next();
+		inScanner.close();
+		int str_length=str_original.length();
+		System.out.println("length is....."+str_length);
+		for(int i=(str_length-1);i>+0;--i) {
+			reversestr=reversestr+str_original.charAt(i);
+		}
+		if(str_original.equalsIgnoreCase(reversestr))
+		{
+			System.out.print("the given String\""+str_original+"\"is a palindrome.");
+		}
+		else {
+			System.out.println("the given String\""+str_original+"\"is not a palindrome.");
+		}
+	}
+}
+package week7;
+import java.util.Scanner;
+public class checkpalindrome {
+	public static void main(String[] args) {
+		String str_original="",reversestr="";
+		Scanner inScanner=new Scanner(System.in);
+		System.out.println("enter any valid String:");
+		str_original=inScanner.next();
+		inScanner.close();
+		int str_length=str_original.length();
+		System.out.println("length is....."+str_length);
+		for(int i=(str_length-1);i>+0;--i) {
+			reversestr=reversestr+str_original.charAt(i);
+		}
+		if(str_original.equalsIgnoreCase(reversestr))
+		{
+			System.out.print("the given String\""+str_original+"\"is a palindrome.");
+		}
+		else {
+			System.out.println("the given String\""+str_original+"\"is not a palindrome.");
+		}
+	}
+}
+package week7;
+import java.util.Scanner;
+public class checkpalindrome {
+	public static void main(String[] args) {
+		String str_original="",reversestr="";
+		Scanner inScanner=new Scanner(System.in);
+		System.out.println("enter any valid String:");
+		str_original=inScanner.next();
+		inScanner.close();
+		int str_length=str_original.length();
+		System.out.println("length is....."+str_length);
+		for(int i=(str_length-1);i>+0;--i) {
+			reversestr=reversestr+str_original.charAt(i);
+		}
+		if(str_original.equalsIgnoreCase(reversestr))
+		{
+			System.out.print("the given String\""+str_original+"\"is a palindrome.");
+		}
+		else {
+			System.out.println("the given String\""+str_original+"\"is not a palindrome.");
+		}
+	}
+}
+output:                                                                                                                                                                                             enter any valid String:
+madam
+length is.....5
+the given String"madam"is not a palindrome.
+enter any valid String:
+java
+length is.....4
+the given String"java"is not a palindrome.
