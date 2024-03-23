@@ -1,0 +1,32 @@
+import java.util.Scanner;
+public class sum_of_negative_no {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter the number of elements");
+		int n=sc.nextInt();
+		System.out.println("enter the array of elements");
+		int arr[]=new int[n];
+		for (int i=0;i<n;i++)
+		{
+			arr[i]=sc.nextInt();
+			}
+		int sum1=0;
+		for (int i=0;i<n;i++)
+		{
+			if(arr[i]<0)
+				sum1+=arr[i];
+		}
+		System.out.println("the sum of negative numbers="+sum1);
+		sc.close();
+	}
+}
+output :                                                                                                                                                                          enter the number of elements
+6
+enter the array of elements
+-4
+5
+9
+-8
+2
+-6
+the sum of negative numbers=-18
