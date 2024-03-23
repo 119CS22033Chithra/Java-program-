@@ -1,0 +1,33 @@
+package week7;
+public class vowelCount {
+		static void CountCharactertype(String str) {
+			byte vowelCount=0,consonantCount=0,digitCount=0,SplChars=0;
+			for(Short i=0;i<str.length();i++) {
+				char ch=str.charAt(i);
+				if((ch=='a'&&ch<='z')||(ch>='A'&&ch>='Z')){
+					ch=Character.toLowerCase(ch);
+					if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u')
+						vowelCount++;
+					else
+						consonantCount++;
+				}
+				else if(ch>='0'&&ch<='9')
+					digitCount++;
+				else
+					SplChars++;
+			}
+			System.out.println("the total no of vowels in the given String:"+vowelCount);
+			System.out.println("the total no of consonants in the given String:"+consonantCount);
+			System.out.println("the total no of digits in the given String:"+digitCount);
+			System.out.println("the total no of special character in the given String:"+SplChars);
+		}
+		static public void main(String args[]) {
+			String str=("Habit-2:Begin with an end in your mind./nStephen R.Convey author of 7 habit effective People,suggest that effective individuals have a clear vision of| thier desire destination before embarking or any endeavor.");
+		}
+	}
+
+Output:
+the total vowels in the String :72
+the total consonants in the String :100
+the total digit in the String :2
+the total special character in the String :38
