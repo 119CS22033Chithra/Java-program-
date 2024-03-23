@@ -26,3 +26,12 @@ public class DuplicateinArray {
 	}
 }
 output:
+enter array size
+5
+enter elements one by one
+65
+23
+89
+65
+45
+array contains duplicate elements at position1and at4
