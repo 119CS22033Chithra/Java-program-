@@ -1,0 +1,54 @@
+import java.lang.String;
+import java.lang.StringBuffer;
+public class StringBufferReader {
+	public static void main(String[] args) {
+		System.out.println("the code illustrates use of String class and its methods");
+		System.out.println("********************************************************");
+		String str=new String("Train your mind to see good in everything");
+		System.out.println("the initial string is:\t"+str);
+		System.out.println("after replacing with 'o'with'O'");
+		System.out.println("the length of given string is:\t"+str .length());
+		System.out.println("the Occurance of the character G is at position:\t"+str.indexOf('G'));
+		System.out.println("the lower case of the given string is:\t"+str.toLowerCase());
+		System.out.println("the upper case of the given string is:\t"+str.toUpperCase());
+		System.out.println("the extracted sub string is:\t"+str.substring(27));
+		String s="       Hello World       ";
+		System.out.println("the string with space:"+s);
+		System.out.println("the string with leading and trailing spaces:\t"+s);
+		System.out.println("the string without spaces:\t"+s.trim());
+		if(s.isEmpty())
+			System.out.println("the string is empty");
+		else
+			System.out.println("the string is not empty.it contains"+s);
+		s=null;
+		System.out.println("the string after modifying...\t"+s);
+		StringBuffer strbuf=new StringBuffer();
+		System.out.println("the initial capacity of string buffer is"+strbuf.capacity());
+		strbuf.append("Hello");
+		System.out.println("the string buffer \t:"+strbuf);
+		strbuf.setLength(20);
+		strbuf.insert(5,"welcome to world of java");
+		System.out.println("the capacity of string buffer after appending"+strbuf.capacity());
+		System.out.println("the reverse of given string bufferis:\n"+strbuf.reverse());
+		System.out.println("the string buffer after deleting\t"+strbuf.delete(5, 43));
+		System.out.println("********************************************************");
+	}
+}
+output:                                                                                                                                                                         the code illustrates use of String class and its methods
+********************************************************
+the initial string is:	Train your mind to see good in everything
+after replacing with 'o'with'O'
+the length of given string is:	41
+the Occurance of the character G is at position:	-1
+the lower case of the given string is:	train your mind to see good in everything
+the upper case of the given string is:	TRAIN YOUR MIND TO SEE GOOD IN EVERYTHING
+the extracted sub string is:	 in everything
+the string with space:       Hello World       
+the string with leading and trailing spaces:	       Hello World       
+the string without spaces:	Hello World
+the string is not empty.it contains       Hello World       
+the string after modifying...	null
+the initial capacity of string buffer is16
+the string buffer 	:Hello
+the capacity of string buffer after appending70
+the reverse of given string bufferis:
