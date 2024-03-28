@@ -1,0 +1,77 @@
+package week8;
+
+import java.util.Scanner;
+public interface shape 
+{
+	public short calculateArea();
+}
+class Rectangle implements shape
+{
+	short length;
+	short width;
+	Rectangle()
+	{
+		Scanner sc=new Scanner (System.in);
+		System.out.println("enter length of rectangle...");
+		length=sc.nextShort();
+		System.out.println("enter width of rectangle...");
+		width=sc.nextShort();
+	}
+	public short calculateArea()
+	{
+		return(short)(length*width);
+	}
+}
+class circle implements shape
+{
+	public short radius;
+	circle()
+	{
+		Scanner sc=new Scanner (System.in);
+		System.out.println("enter radius of circle...");
+		radius=sc.nextShort();
+	}
+	public short calculateArea()
+	{
+		return (short)(3.147*radius*radius);
+	}
+}
+class square implements shape
+{
+	public short side;
+	square()
+	{
+		Scanner sc=new Scanner (System.in);
+		System.out.println("enter side of square...");
+        side = sc.nextShort();
+		sc.close();
+	}
+	public short calculateArea()
+	{
+		return (short)(side*side);
+	}
+}
+class invokeshape
+{
+	public short calculateshapeArea (shape ishape)
+	{
+		return ishape.calculateArea();
+	}
+}
+class demoopencloseprinciple
+{
+	public static void main(String args[])
+	{
+		invokeshape is=new invokeshape();
+		Rectangle rect=new Rectangle();
+		circle cir=new circle();
+		square sqr=new square();
+		short rarea=is.calculateshapeArea(rect);
+		short carea=is.calculateshapeArea(cir);
+		short sarea=is.calculateshapeArea(sqr);
+		System.out.println("**********OUTPUT**********");
+		System.out.println("area of rectangle is"+rarea);
+		System.out.println("area of rectangle is"+carea);
+		System.out.println("area of rectangle is"+sarea);
+	}
+}
