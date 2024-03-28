@@ -1,0 +1,62 @@
+package week8;
+
+import java.util.Scanner;
+public interface Orderdelivery 
+{
+	public void deliverOrder();
+}
+class Swiggy implements Orderdelivery 
+{
+	String cust_name;
+	byte OrderID;
+	Swiggy()
+	{
+		Scanner sc=new Scanner (System.in);
+		System.out.println("enter customer name");
+		cust_name=sc.next();
+		System.out.println("enter order id");
+		OrderID=sc.nextByte();
+	}
+	public void deliverOrder()
+	{
+		System.out.println("Deliverying food order of Mr."+cust_name+"with order number "+OrderID+".");
+	}
+}
+class Swiggyinstamart implements Orderdelivery 
+{
+	String cust_name;
+	byte OrderID;
+	int product_qty;
+	Swiggyinstamart()
+	{
+		Scanner sc=new Scanner (System.in);
+		System.out.println("enter customer name");
+		cust_name=sc.next();
+		System.out.println("enter order id");
+		OrderID=sc.nextByte();
+		System.out.println("enter product quantity");
+		product_qty=sc.nextInt();
+	}
+	public void deliverOrder()
+	{
+		System.out.println("Deliverying grocery order of Mr."+cust_name+"with order number "+OrderID+".\n The total no of products delivered as"+product_qty);
+	}
+}
+class Delivery
+{
+	public void deliverTocustomer(Orderdelivery od)
+	{
+		od.deliverOrder();
+	}
+}
+class demoOCP
+{
+	public static void main(String args[])
+	{
+		Delivery order=new Delivery();
+		Swiggy sw=new Swiggy();
+		order.deliverTocustomer(sw);
+		Swiggyinstamart insta=new Swiggyinstamart();
+		order.deliverTocustomer(insta);
+	}
+}
