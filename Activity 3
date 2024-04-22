@@ -1,0 +1,48 @@
+import java.util.Scanner;
+class Book {
+    private String title;
+    private String author;
+    private int pageCount;
+    public Book() {
+        this.title = "Unknown";
+        this.author = "Unknown";
+        this.pageCount = 0;
+    }
+    public void displayInfo() {
+        System.out.println("Title: " + title);
+        System.out.println("Author: " + author);
+        System.out.println("Page Count: " + pageCount);
+    }
+    public String getTitle() {
+        return title;
+    }
+    public void setTitle(String title) {
+        this.title = title;
+    }
+    public String getAuthor() {
+        return author;
+    }
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+    public int getPageCount() {
+        return pageCount;
+    }
+    public void setPageCount(int pageCount) {
+        this.pageCount = pageCount;
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        Book book = new Book();
+        System.out.print("Enter title: ");
+        book.setTitle(scanner.nextLine());
+        System.out.print("Enter author: ");
+        book.setAuthor(scanner.nextLine());
+        System.out.print("Enter page count: ");
+        book.setPageCount(scanner.nextInt());
+        System.out.println("\nBook Information:");
+        book.displayInfo();
+    }
+}
